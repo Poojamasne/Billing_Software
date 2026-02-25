@@ -1,0 +1,24 @@
+/* Layout specific styles */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Smooth transitions */
+.sidebar-transition-enter {
+  transform: translateX(-100%);
+}
+
+.sidebar-transition-enter-active {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-transition-exit {
+  transform: translateX(0);
+}
+
+.sidebar-transition-exit-active {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}

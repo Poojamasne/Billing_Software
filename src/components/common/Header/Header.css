@@ -1,0 +1,242 @@
+.header {
+  background: white !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  z-index: 1300 !important;
+  width: 100% !important;
+}
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px !important;
+  min-height: 70px !important;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-toggle {
+  color: #64748b !important;
+  padding: 8px !important;
+}
+
+.menu-toggle:hover {
+  background: #f8fafc !important;
+  color: #3b82f6 !important;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px !important;
+  color: #3b82f6;
+}
+
+.logo-text {
+  font-weight: 700 !important;
+  color: #0f172a;
+  font-size: 1.25rem !important;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  color: #3b82f6;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-btn {
+  color: #64748b !important;
+  padding: 8px !important;
+}
+
+.notification-btn:hover {
+  background: #f8fafc !important;
+  color: #3b82f6 !important;
+}
+
+.notification-badge .MuiBadge-badge {
+  background: #ef4444 !important;
+  color: white !important;
+  font-size: 11px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+}
+
+.notification-icon {
+  font-size: 22px !important;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-section:hover {
+  background: #f8fafc;
+}
+
+.user-avatar {
+  width: 38px !important;
+  height: 38px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.2 !important;
+}
+
+.user-role {
+  color: #64748b !important;
+  font-size: 0.7rem !important;
+}
+
+/* Profile Menu */
+.profile-menu .MuiPaper-root {
+  width: 240px;
+  margin-top: 8px;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.profile-avatar {
+  width: 48px !important;
+  height: 48px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-menu .MuiMenuItem-root {
+  padding: 12px 16px !important;
+  gap: 12px;
+}
+
+.profile-menu .MuiMenuItem-root svg {
+  font-size: 20px;
+  color: #64748b;
+}
+
+.profile-menu .MuiMenuItem-root:hover {
+  background: #f8fafc !important;
+}
+
+/* Notification Menu */
+.notification-menu .MuiPaper-root {
+  width: 320px;
+  margin-top: 8px;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.notification-item {
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding: 16px !important;
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notification-title {
+  font-weight: 600 !important;
+  color: #0f172a !important;
+}
+
+.notification-time {
+  font-size: 0.65rem !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-toolbar {
+    padding: 0 16px !important;
+  }
+  
+  .logo-text {
+    display: none;
+  }
+  
+  .user-info {
+    display: none;
+  }
+  
+  .user-section {
+    padding: 6px;
+  }
+  
+  .user-avatar {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-btn span {
+    display: none;
+  }
+  
+  .date-btn .MuiButton-startIcon {
+    margin: 0;
+  }
+  
+  .export-btn span {
+    display: none;
+  }
+  
+  .export-btn .MuiButton-startIcon {
+    margin: 0;
+  }
+}
