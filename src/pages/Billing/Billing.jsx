@@ -24,7 +24,6 @@ import {
 import {
   Plus,
   Minus,
-  Printer,
   Trash2,
   Search,
   User,
@@ -33,7 +32,6 @@ import {
   IndianRupee,
   Percent,
   Download,
-  RefreshCw,
   CheckCircle,
   Mail,
   MapPin
@@ -94,7 +92,7 @@ const Billing = () => {
   const [invoiceNumber, setInvoiceNumber] = useState('');
   const [discount, setDiscount] = useState(0);
   const [discountType, setDiscountType] = useState('percentage');
-  const [gstRate, setGstRate] = useState(18);
+  const [gstRate] = useState(18);
   const [showProductSearch, setShowProductSearch] = useState(false);
   const [invoiceDate] = useState(new Date().toLocaleDateString('en-US', {
     year: 'numeric',
@@ -145,15 +143,6 @@ const Billing = () => {
     setBillItems(prevItems => prevItems.filter(item => item.id !== productId));
   };
 
-  const clearBill = () => {
-    setBillItems([]);
-    setCustomerName('');
-    setCustomerPhone('');
-    setCustomerEmail('');
-    setCustomerAddress('');
-    setDiscount(0);
-    setGstRate(18);
-  };
 
   const handleSave = () => {
     if (!customerName) {
@@ -386,18 +375,6 @@ const Billing = () => {
     doc.save(`Invoice_${invoiceNumber}.pdf`);
   };
 
-  const handlePrint = () => {
-    if (!customerName) {
-      alert('Please enter customer name');
-      return;
-    }
-    if (billItems.length === 0) {
-      alert('Please add at least one item');
-      return;
-    }
-    
-    window.print();
-  };
 
   const subtotal = billItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   

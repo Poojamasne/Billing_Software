@@ -31,13 +31,10 @@ import {
   Settings,
   Menu as MenuIcon,
   X,
-  IndianRupee,
   Calculator,
   Bell,
   LogOut,
   User,
-  ChevronLeft,
-  ChevronRight,
   Home // Add Home icon
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -47,7 +44,7 @@ const Layout = () => {
   const theme = useTheme();
   const location = useLocation();
   const navigate = useNavigate();
-  const { logout, user } = useAuth();
+  const { logout} = useAuth();
 
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
